@@ -62,5 +62,5 @@ fun DataCards(navController: NavHostController, profesion: String, genero: Strin
 @Preview(showBackground = true)
 @Composable
 fun PreviewCard() {
-    DataCards(navController = rememberNavController(), "Caca", "Hombre", 65, R.drawable.oak)
+    DataCards(navController = rememberNavController(), "Caca", "Hombre", 65, R.drawable.female03)
 }

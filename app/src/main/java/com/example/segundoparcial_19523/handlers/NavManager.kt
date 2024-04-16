@@ -18,21 +18,21 @@ fun NavManager() {
             ListView(navController)
         }
 
-        composable(route = "InfoView/{img}/{trabajo}", arguments = listOf(
-            navArgument("img") {type = NavType.IntType},
-            navArgument("trabajo") {type = NavType.StringType}
+        composable(route = "InfoView/{image}/{profesion}", arguments = listOf(
+            navArgument("image") {type = NavType.IntType},
+            navArgument("profesion") {type = NavType.StringType}
         )) {
                 parameters ->
-            val img = parameters.arguments?.getInt("img") ?: 0
-            val trabajo = parameters.arguments?.getString("trabajo") ?: ""
+            val image = parameters.arguments?.getInt("image") ?: 0
+            val profesion = parameters.arguments?.getString("profesion") ?: ""
 
-            InfoView(navController, img, trabajo)
+            InfoView(navController, image, profesion)
         }
 
     }
 }
 
 @Composable
-fun InfoView(navController: NavHostController, img: Int, trabajo: String) {
+fun InfoView(navController: NavHostController, image: Int, profesion: String) {
 
 }
