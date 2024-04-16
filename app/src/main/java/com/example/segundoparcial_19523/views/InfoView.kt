@@ -29,6 +29,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 
@@ -41,7 +42,7 @@ fun DataView(navController: NavHostController, image: Int, profesion: String) {
 
     var name by remember {mutableStateOf("")}
     var Pokemon by remember {mutableStateOf("")}
-    var message by remember {mutableStateOf("¡Selecciona a tu compañero de viaje!")}
+    var message by remember {mutableStateOf("Favor de seleccionar un pokemon")}
     val PokemonviewModel = PokemonViewModels()
 
     Column (
@@ -68,7 +69,7 @@ fun DataView(navController: NavHostController, image: Int, profesion: String) {
 
         Spacer(modifier = Modifier.height(20.dp))
 
-        Text(text = "Selecciona un pokemon")
+        Text(text = "¡Selecciona a tu compañero de viaje!", fontSize = 20.sp)
 
         Spacer(modifier = Modifier.height(20.dp))
 
@@ -113,9 +114,9 @@ fun DataView(navController: NavHostController, image: Int, profesion: String) {
             }
         }
 
-        Spacer(modifier = Modifier.height(10.dp))
+        Spacer(modifier = Modifier.height(40.dp))
 
-        Text(text = message)
+        Text(text = message, fontSize = 16.sp)
     }
 }
 
