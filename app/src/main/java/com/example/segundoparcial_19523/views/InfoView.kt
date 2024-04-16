@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -24,6 +25,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -39,7 +41,7 @@ fun DataView(navController: NavHostController, image: Int, profesion: String) {
 
     var name by remember {mutableStateOf("")}
     var Pokemon by remember {mutableStateOf("")}
-    var message by remember {mutableStateOf("Favor selecciona un pokemon")}
+    var message by remember {mutableStateOf("¡Selecciona a tu compañero de viaje!")}
     val PokemonviewModel = PokemonViewModels()
 
     Column (
@@ -54,10 +56,13 @@ fun DataView(navController: NavHostController, image: Int, profesion: String) {
             leadingIcon = {
                 Image (
                     painter = painterResource(id = image),
-                    contentDescription = "Personaje"
+                    contentDescription = "Personaje",
+                    modifier = Modifier
+                        .height(70.dp)
+                        .clip(CircleShape)
                 )
             },
-            label = { Text(text = "¿Nombre?")},
+            label = { Text(text = "¿Nombre plis?")},
             modifier = Modifier.fillMaxWidth()
         )
 

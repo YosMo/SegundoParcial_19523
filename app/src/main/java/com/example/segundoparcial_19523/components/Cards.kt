@@ -49,11 +49,11 @@ fun DataCards(navController: NavHostController, profesion: String, genero: Strin
             Spacer(modifier = Modifier.width(20.dp))
 
             Column {
-                Text(text = profesion, fontSize = 10.sp)
-                Spacer(modifier = Modifier.height(20.dp))
-                Text(text = genero, fontSize = 10.sp)
-                Spacer(modifier = Modifier.height(20.dp))
-                Text(text = "$edad años", fontSize = 10.sp)
+                Text(text = profesion, fontSize = 20.sp)
+                Spacer(modifier = Modifier.height(10.dp))
+                Text(text = genero, fontSize = 15.sp)
+                Spacer(modifier = Modifier.height(10.dp))
+                Text(text = "$edad años", fontSize = 15.sp)
             }
         }
     }

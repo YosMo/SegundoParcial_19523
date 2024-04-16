@@ -44,7 +44,7 @@ fun ListView(navController: NavHostController) {
             verticalAlignment = Alignment.CenterVertically
         ) {
 
-            Text(text = "¿Eres niñio o niñia? ")
+            Text(text = "¿Eres chico o chica? ")
             Spacer(modifier = Modifier.width(10.dp))
             Image(
                 painter = painterResource(id = R.drawable.oak),
@@ -59,7 +59,7 @@ fun ListView(navController: NavHostController) {
             items(viewModel.getPersonajeList()) {
                     person ->
                 DataCards(navController, person.profesion, person.genero, person.edad, person.image)
-                Spacer(modifier = Modifier.height(20.dp))
+                Spacer(modifier = Modifier.height(18.dp))
             }
         }
     }
