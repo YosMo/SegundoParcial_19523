@@ -23,9 +23,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.example.example.components.DataCard
+
 import com.example.example.viewmodels.PersonajeViewModels
 import com.example.segundoparcial_19523.R
+import com.example.segundoparcial_19523.components.DataCards
 
 @Composable
 fun ListView(navController: NavHostController) {
@@ -48,14 +49,16 @@ fun ListView(navController: NavHostController) {
             Image(
                 painter = painterResource(id = R.drawable.oak),
                 contentDescription = "Img",
-                modifier = Modifier.clip(CircleShape)
+                modifier = Modifier
+                    .clip(CircleShape)
+                    .height(60.dp)
             )
         }
 
         LazyColumn {
             items(viewModel.getPersonajeList()) {
                     person ->
-                DataCard(navController, person.profesion, person.genero, person.edad, person.image)
+                DataCards(navController, person.profesion, person.genero, person.edad, person.image)
                 Spacer(modifier = Modifier.height(20.dp))
             }
         }

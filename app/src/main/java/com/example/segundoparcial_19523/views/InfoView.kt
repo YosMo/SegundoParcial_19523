@@ -29,8 +29,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.example.example.R
-import com.example.example.viewmodels.PokeViewModels
+
 import com.example.example.viewmodels.PokemonViewModels
 import com.example.segundoparcial_19523.R
 
@@ -39,7 +38,7 @@ import com.example.segundoparcial_19523.R
 fun DataView(navController: NavHostController, image: Int, profesion: String) {
 
     var name by remember {mutableStateOf("")}
-    var pokemon by remember {mutableStateOf("")}
+    var Pokemon by remember {mutableStateOf("")}
     var message by remember {mutableStateOf("Favor selecciona un pokemon")}
     val PokemonviewModel = PokemonViewModels()
 
@@ -71,7 +70,7 @@ fun DataView(navController: NavHostController, image: Int, profesion: String) {
         LazyRow {
             items(PokemonviewModel.getPokemonList()) { pokemon ->
                 Card (
-                    onClick = {pokemon = pokemon.name}
+                    onClick = {Pokemon = pokemon.name}
                 ) {
                     Column (modifier = Modifier.padding(10.dp)) {
                         Image(
@@ -102,7 +101,7 @@ fun DataView(navController: NavHostController, image: Int, profesion: String) {
 
             Button(
                 onClick = {
-                    message = "$profesion $name eligió $pokemon"
+                    message = "$profesion $name eligió $Pokemon"
                 }
             ) {
                 Text(text = "Finalizar")

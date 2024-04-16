@@ -28,7 +28,7 @@ import com.example.segundoparcial_19523.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun DataCard(navController: NavHostController, profesion: String, genero: String, edad: Int, image: Int) {
+fun DataCards(navController: NavHostController, profesion: String, genero: String, edad: Int, image: Int) {
     Card(
         colors = CardDefaults.cardColors(containerColor = Color(0xFFF2F2F2)),
         onClick = {
@@ -62,5 +62,5 @@ fun DataCard(navController: NavHostController, profesion: String, genero: String
 @Preview(showBackground = true)
 @Composable
 fun PreviewCard() {
-    DataCard(navController = rememberNavController(), "Albañil", "Hombre", 65, R.drawable.oak)
+    DataCards(navController = rememberNavController(), "Caca", "Hombre", 65, R.drawable.oak)
 }
